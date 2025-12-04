@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirta Ampera - Presentation</title>
+
+    <!-- Fonts -->
+    <!-- Font DM Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./src/css/app.css">
+
+    <!-- Icons -->
+    <!-- Boxicons CDN -->
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+    <!-- JS Libraries & Configs-->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="./src/js/app.js"></script>
+</head>
+
+<body class="bg-neutral-950">
+
+    <div id="videotron" class="relative bg-neutral-900">
+
+        <!-- Controls -->
+        <div class="click-zone click-prev" id="btnPrev"></div>
+        <div class="click-center" id="btnNextCenter"></div>
+        <div class="click-zone click-next" id="btnNext"></div>
+
+        <!-- Shiny Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+
+        <!-- SLIDES CONTAINER (TOTAL 12 SLIDES) -->
+        <div id="slidesContainer">
+
+            <!-- SLIDES NAV/INFO BAR ON ALL SLIDES -->
+            <div id="footer"
+                class="absolute left-1/2 bottom-8 -translate-x-1/2 z-50 flex items-center gap-6 opacity-60  slide-elem"
+                style="pointer-events: none; display: none">
+                <p class="text-[10px] lg:text-xs text-neutral-400 tracking-[0.2em] uppercase border-l-2 border-emerald-500 pl-3"
+                    style="text-shadow: 0 1px 3px rgba(0,0,0,0.45);">
+                    Perumda Air Minum Tirta Ampera Boyolali &copy; 2025
+                </p>
+            </div>
+
+            <!-- INSERT_YOUR_CODE -->
+            <!-- SLIDE 0: Blank Page -->
+            <div class="slide" data-anim="slideUp">
+                <div class="flex relative w-full h-full items-center justify-center">
+                    <!-- Intentionally blank for transition or fade in -->
+                </div>
+            </div>
+
+            <!-- SLIDE 1: Judul & Pembukaan (Parallax) -->
+            <div class="slide active-slide" data-anim="parallaxX">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img portrait" style="background-image: url('./src/images/phones.png');"></div>
+                    <div class="overlay-gradient"></div>
+                    <div class="content-wrapper">
+                        <div class="w-full lg:w-3/4">
+                            <div class="flex gap-8 items-center mb-12 lg:mb-20 slide-elem">
+                                <img src="./src/images/logo-boyolali.png" alt="Logo Boyolali" class="w-auto h-14">
+                                <img src="./src/images/logo.png" alt="Tirta Ampera Logo" class="w-auto h-14">
+                            </div>
+                            <div
+                                class="inline-flex gap-2 items-center px-3 py-1 mb-2 rounded-full border lg:mb-4 bg-emerald-900/40 border-emerald-500/30 slide-elem">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <span
+                                    class="text-emerald-400 font-bold tracking-wider uppercase text-[10px] lg:text-xs">Grand
+                                    Launching</span>
+                            </div>
+                            <h1
+                                class="text-3xl sm:text-5xl lg:text-[4rem] font-bold text-white leading-tight lg:leading-[1.1] mb-3 lg:mb-5 slide-elem">
+                                Kami Bangun <span class="text-gradient-sky-emerald">Kepercayaan</span>,<br>
+                                Bukan Sekadar Jaringan Pipa.
+                            </h1>
+                            <p class="mb-6 text-lg font-light sm:text-xl lg:text-2xl text-neutral-200 slide-elem">
+                                Aplikasi Mobile <strong class="text-white">Tirta Amperaku</strong>.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Transformasi Tirta Ampera (Timeline, Standard Slide Up, Milestone Data Bener) -->
+            <div class="slide" data-anim="slideUp">
+                <div class="flex relative w-full h-full">
+                    <div class="justify-center content-wrapper">
+                        <h2
+                            class="mb-10 text-3xl font-bold text-center text-white sm:text-4xl lg:text-5xl lg:mb-16 slide-elem">
+                            Transformasi Tirta Ampera</h2>
+                        <div class="flex relative justify-between items-center px-4 mt-4 w-full lg:px-16 lg:mt-8">
+                            <!-- Line -->
+                            <div class="absolute left-0 top-5 w-full h-1 rounded-full bg-neutral-700/50 -z-10"></div>
+                            <div
+                                class="timeline-progress absolute top-5 left-0 h-1 bg-gradient-to-r from-sky-500 to-emerald-500 -z-10 w-0 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+                            </div>
+
+                            <!-- Point 1 -->
+                            <div class="text-center opacity-0 timeline-point group">
+                                <div class="mx-auto mb-2 w-6 h-6 rounded-full border-4 transition 
+                                            lg:w-12 lg:h-12 bg-neutral-600 border-neutral-700 group-hover:bg-neutral-400
+                                            flex items-center justify-center">
+                                    <i class="bx bx-train text-lg text-emerald-400"></i>
+                                </div>
+                                <div
+                                    class="text-base font-extrabold text-white drop-shadow-sm lg:text-xl group-hover:text-emerald-300 transition">
+                                    Sejak Zaman Belanda
+                                </div>
+                                <div
+                                    class="text-xs text-emerald-200 mt-1 font-bold drop-shadow group-hover:text-white transition">
+                                    Air untuk Lokomotif</div>
+                            </div>
+
+                            <!-- Point 2 -->
+                            <div class="text-center opacity-0 timeline-point group">
+                                <div class="mx-auto mb-2 w-6 h-6 rounded-full border-4 transition 
+                                            lg:w-12 lg:h-12 bg-neutral-600 border-neutral-700 group-hover:bg-neutral-400
+                                            flex items-center justify-center">
+                                    <i class="bx bx-water text-lg text-sky-400"></i>
+                                </div>
+                                <div
+                                    class="text-base font-extrabold text-white drop-shadow-sm lg:text-xl group-hover:text-sky-300 transition">
+                                    1960-an
+                                </div>
+                                <div
+                                    class="text-xs text-sky-200 mt-1 font-bold drop-shadow group-hover:text-white transition">
+                                    Pengembangan Sistem Air
+                                </div>
+                            </div>
+
+                            <!-- Point 3 -->
+                            <div class="text-center opacity-0 timeline-point group">
+                                <div class="mx-auto mb-2 w-6 h-6 rounded-full border-4 transition 
+                                            lg:w-12 lg:h-12 bg-neutral-600 border-neutral-700 group-hover:bg-neutral-400
+                                            flex items-center justify-center">
+                                    <i class="bx bx-donate-blood text-lg text-rose-400"></i>
+                                </div>
+                                <div
+                                    class="text-base font-extrabold text-white drop-shadow-sm lg:text-xl group-hover:text-rose-300 transition">
+                                    1975
+                                </div>
+                                <div
+                                    class="text-xs text-rose-200 mt-1 font-bold drop-shadow group-hover:text-white transition">
+                                    Awal Pelayanan Masyarakat
+                                </div>
+                            </div>
+
+                            <!-- Point 4 -->
+                            <div class="text-center opacity-0 timeline-point group">
+                                <div class="mx-auto mb-2 w-6 h-6 rounded-full border-4 transition 
+                                            lg:w-12 lg:h-12 bg-neutral-600 border-neutral-700 group-hover:bg-neutral-400
+                                            flex items-center justify-center">
+                                    <i class="bx bx-building-house text-lg text-purple-400"></i>
+                                </div>
+                                <div
+                                    class="text-base font-extrabold text-white drop-shadow-sm lg:text-xl group-hover:text-purple-300 transition">
+                                    1978
+                                </div>
+                                <div
+                                    class="text-xs text-purple-200 mt-1 font-bold drop-shadow group-hover:text-white transition">
+                                    Badan Pengelola Air Minum
+                                </div>
+                            </div>
+
+                            <!-- Point 5 -->
+                            <div class="text-center opacity-0 timeline-point group">
+                                <div class="mx-auto mb-2 w-6 h-6 rounded-full border-4 transition 
+                                            lg:w-12 lg:h-12 bg-neutral-600 border-neutral-700 group-hover:bg-neutral-400
+                                            flex items-center justify-center">
+                                    <i class="bx bx-thumb-up text-lg text-yellow-400"></i>
+                                </div>
+                                <div
+                                    class="text-base font-extrabold text-white drop-shadow-sm lg:text-xl group-hover:text-yellow-300 transition">
+                                    1994
+                                </div>
+                                <div
+                                    class="text-xs text-yellow-200 mt-1 font-bold drop-shadow group-hover:text-white transition">
+                                    Peningkatan Tata Kelola
+                                </div>
+                            </div>
+
+                            <!-- Point 6 (Active/Present) -->
+                            <div class="text-center opacity-0 scale-110 timeline-point">
+                                <div
+                                    class="relative mx-auto mb-2 w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center">
+                                    <div class="absolute inset-0 bg-emerald-500 rounded-full opacity-75 animate-ping">
+                                    </div>
+                                    <div
+                                        class="relative w-full h-full bg-gradient-to-br from-sky-400 to-emerald-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                        <i class="bx bx-chip text-2xl text-white"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400 lg:text-2xl drop-shadow">
+                                    2025
+                                </div>
+                                <div class="text-white text-sm mt-1 font-bold drop-shadow">
+                                    Digitalisasi & Peningkatan Layanan
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Perubahan & Nilai Baru (Parallax) -->
+            <div class="slide" data-anim="parallaxY">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img" style="background-image: url('/src/images/penyerahan_sample.jpg');">
+                    </div>
+                    <div class="overlay-gradient"
+                        style="background: linear-gradient(90deg, #171717 40%, transparent 100%);"></div>
+                    <div class="content-wrapper">
+                        <div class="w-full max-w-xl">
+                            <h2
+                                class="mb-8 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:mb-10 slide-elem">
+                                Perubahan & <span class="text-sky-400">Nilai Baru.</span>
+                            </h2>
+                            <div class="grid grid-cols-1 gap-4 slide-elem anim-cards-parent text-sm">
+                                <div
+                                    class="p-4 rounded-xl border-l-4 border-emerald-500 glass-panel anim-card flex items-start gap-4">
+                                    <i class="mt-1 text-xl text-emerald-400 bx bx-water"></i>
+                                    <div class="space-y-2">
+                                        <h4 class="mb-0.5 text-xl font-bold text-white">Bukan Sekadar Pipa</h4>
+                                        <p class="text-sm text-neutral-400 leading-tight">Membangun kepercayaan &
+                                            kesejahteraan.</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 rounded-xl border-l-4 border-blue-500 glass-panel anim-card flex items-start gap-4">
+                                    <i class="mt-1 text-xl text-blue-400 bx bx-rocket"></i>
+                                    <div class="space-y-2">
+                                        <h4 class="mb-0.5 text-xl font-bold text-white">Inovasi Berkelanjutan</h4>
+                                        <p class="text-sm text-neutral-400 leading-tight">Layanan modern & aplikasi
+                                            mobile.</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-4 rounded-xl border-l-4 border-purple-500 glass-panel anim-card flex items-start gap-4">
+                                    <i class="mt-1 text-xl text-purple-400 bx bx-group"></i>
+                                    <div class="space-y-2">
+                                        <h4 class="mb-0.5 text-xl font-bold text-white">Komitmen Kami</h4>
+                                        <p class="text-sm text-neutral-400 leading-tight">
+                                            Profesional, tulus, dan transparan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: Produk Inovasi (Parallax, Ringkas & On Point) -->
+            <div class="slide" data-anim="parallaxX">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1570530999920-53896dfa251b?q=80&w=2070&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-gradient"></div>
+                    <div class="content-wrapper flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+                        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                            <h2 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white slide-elem">
+                                Aplikasi <span class="text-gradient-sky-emerald block">Tirta Amperaku</span>
+                            </h2>
+                            <div class="mb-4 flex flex-wrap justify-center gap-2 lg:justify-start">
+                                <span
+                                    class="inline-flex items-center gap-1 rounded-full bg-lime-400/20 px-3 py-1 text-xs font-semibold text-lime-300 slide-elem">
+                                    <i class="bx bx-plus"></i>
+                                    Mobile Experience
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/80 slide-elem">
+                                    Android &amp; iOS
+                                </span>
+                            </div>
+
+                            <div class="mb-4 text-lg lg:text-xl text-neutral-100 slide-elem">
+                                Solusi layanan air bersih modern, mudah & terintegrasi untuk semua pelanggan.
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 flex justify-center relative slide-elem mt-8 lg:mt-0">
+                            <div class="mockup-phone max-w-[90%] mx-auto translate-y-[20%] transform">
+                                <img src="./src/images/mockup.png" class="object-cover w-full h-full opacity-95">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 6: Fitur Pengaduan (SlideUp) -->
+            <div class="slide" data-anim="slideUp">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-gradient"
+                        style="background: linear-gradient(270deg, #171717 50%, transparent 100%);"></div>
+                    <div class="flex-row-reverse content-wrapper">
+                        <div class="flex flex-col justify-center pl-10 w-1/2 text-right">
+                            <div class="flex justify-end mb-4 slide-elem"><i
+                                    class="text-5xl text-emerald-400 bx bx-headphone"></i></div>
+                            <h2 class="mb-4 text-4xl font-bold text-white slide-elem">Pengaduan Pelanggan</h2>
+                            <p class="text-xl text-neutral-300 slide-elem">Lapor gangguan & keluhan langsung dari
+                                aplikasi. Diproses cepat & transparan oleh tim.</p>
+                        </div>
+                        <div class="flex justify-center items-center w-1/2 slide-elem">
+                            <!-- Mock UI Card -->
+                            <div
+                                class="p-6 w-full max-w-md rounded-xl border glass-panel border-white/10 anim-cards-parent">
+                                <div class="flex gap-4 items-center pb-4 mb-4 border-b border-white/10 anim-card">
+                                    <div
+                                        class="flex justify-center items-center w-12 h-12 text-red-400 rounded-full bg-red-500/20">
+                                        <i class="bx bx-error"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-white">Pipa Bocor</div>
+                                        <div class="text-xs text-neutral-400">Jl. Merbabu No. 12</div>
+                                    </div>
+                                    <div class="px-2 py-1 ml-auto text-xs text-yellow-400 rounded bg-yellow-500/20">
+                                        Diproses</div>
+                                </div>
+                                <div class="flex gap-4 items-center anim-card">
+                                    <div
+                                        class="flex justify-center items-center w-12 h-12 text-blue-400 rounded-full bg-blue-500/20">
+                                        <i class="bx bx-droplet"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-white">Air Mati</div>
+                                        <div class="text-xs text-neutral-400">Kec. Boyolali</div>
+                                    </div>
+                                    <div class="px-2 py-1 ml-auto text-xs text-green-400 rounded bg-green-500/20">
+                                        Selesai</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 7: Fitur Bayar Tagihan (Parallax) -->
+            <div class="slide" data-anim="parallaxY">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-gradient"></div>
+                    <div class="content-wrapper">
+                        <div class="w-3/5">
+                            <div class="mb-4 slide-elem"><i class="text-5xl text-sky-400 bx bx-wallet"></i></div>
+                            <h2 class="mb-6 text-4xl font-bold text-white slide-elem">Bayar Tagihan Mudah</h2>
+                            <ul class="space-y-4 text-xl slide-elem text-neutral-200">
+                                <li class="flex gap-3 items-center"><i class="text-emerald-400 bx bx-check"></i>
+                                    Bayar via QRIS & Virtual Account</li>
+                                <li class="flex gap-3 items-center"><i class="text-emerald-400 bx bx-check"></i>
+                                    Lebih fleksibel & aman</li>
+                                <li class="flex gap-3 items-center"><i class="text-emerald-400 bx bx-check"></i>
+                                    Bukti bayar otomatis tersimpan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 8: Fitur Pasang Baru (SlideUp) -->
+            <div class="slide" data-anim="slideUp">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-gradient"
+                        style="background: linear-gradient(90deg, #171717 60%, transparent 100%);"></div>
+                    <div class="content-wrapper">
+                        <div class="w-3/5">
+                            <div class="mb-4 slide-elem"><i class="text-5xl text-purple-400 bx bx-home-alt"></i></div>
+                            <h2 class="mb-4 text-4xl font-bold text-white slide-elem">Pasang Baru</h2>
+                            <p class="mb-6 text-xl text-neutral-300 slide-elem">Daftar sambungan air baru cukup lewat
+                                aplikasi. Tidak perlu datang ke kantor.</p>
+                            <div class="inline-flex gap-8 p-4 rounded-xl slide-elem glass-panel anim-cards-parent">
+                                <div class="text-center anim-card">
+                                    <div class="text-2xl font-bold text-white">1</div>
+                                    <div class="text-xs text-neutral-400">Daftar</div>
+                                </div>
+                                <div class="text-center anim-card">
+                                    <div class="text-2xl font-bold text-white">2</div>
+                                    <div class="text-xs text-neutral-400">Survei</div>
+                                </div>
+                                <div class="text-center anim-card">
+                                    <div class="text-2xl font-bold text-white">3</div>
+                                    <div class="text-xs text-neutral-400">Pasang</div>
+                                </div>
+                                <div class="text-center anim-card">
+                                    <div class="text-2xl font-bold text-white">4</div>
+                                    <div class="text-xs text-neutral-400">Aktif</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 9: Fitur Catat Meter (SlideUp) -->
+            <div class="slide" data-anim="slideUp">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=2070&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-gradient"></div>
+                    <div class="flex-row content-wrapper">
+                        <div class="flex flex-col justify-center pr-12 w-1/2 lg:w-3/5">
+                            <div class="mb-4 slide-elem"><i class="text-5xl text-emerald-400 bx bx-camera"></i>
+                            </div>
+                            <h2 class="mb-6 text-4xl font-bold text-white slide-elem">Catat Meter Mandiri</h2>
+                            <p class="text-xl text-neutral-300 slide-elem">Catat atau foto angka meter mandiri lewat
+                                aplikasi. Data langsung terintegrasi, tagihan lebih akurat setiap periode.</p>
+                        </div>
+                        <div class="flex relative justify-center items-center w-1/2 lg:w-2/5 slide-elem">
+                            <div
+                                class="mockup-phone w-[220px] h-[440px] bg-neutral-900 border-neutral-700 flex items-center justify-center">
+                                <i class="text-6xl bx bx-camera-movie text-neutral-700"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 10: Fitur Lainnya (Parallax) -->
+            <div class="slide" data-anim="parallaxX">
+                <div class="flex relative w-full h-full">
+                    <div class="justify-center content-wrapper">
+                        <h2 class="mb-12 text-4xl font-bold text-center text-white slide-elem">Fitur Menarik Lainnya
+                        </h2>
+                        <div class="grid grid-cols-3 gap-8 px-10 slide-elem anim-cards-parent">
+                            <!-- Feature 1 -->
+                            <div
+                                class="p-6 text-center rounded-2xl transition glass-panel hover:bg-neutral-800 anim-card">
+                                <i class="mb-4 text-4xl text-blue-400 bx bx-line-chart"></i>
+                                <h3 class="mb-2 font-bold text-white">Real-time</h3>
+                                <p class="text-sm text-neutral-400">Monitoring kualitas air.</p>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div
+                                class="p-6 text-center rounded-2xl transition glass-panel hover:bg-neutral-800 anim-card">
+                                <i class="mb-4 text-4xl text-yellow-400 bx bx-bell"></i>
+                                <h3 class="mb-2 font-bold text-white">Notifikasi</h3>
+                                <p class="text-sm text-neutral-400">Info gangguan & tagihan.</p>
+                            </div>
+                            <!-- Feature 3 -->
+                            <div
+                                class="p-6 text-center rounded-2xl transition glass-panel hover:bg-neutral-800 anim-card">
+                                <i class="mb-4 text-4xl text-purple-400 bx bx-history"></i>
+                                <h3 class="mb-2 font-bold text-white">Riwayat</h3>
+                                <p class="text-sm text-neutral-400">History pemakaian & transaksi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 11: Komitmen Pengembangan (SlideUp) -->
+            <div class="slide" data-anim="slideUp">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-full"></div>
+                    <div class="justify-center items-center px-32 text-center content-wrapper">
+                        <i class="mb-6 text-6xl bx bxs-quote-left text-sky-500/30 slide-elem"></i>
+                        <h2
+                            class="mb-8 text-3xl italic font-bold leading-tight text-white sm:text-4xl lg:text-5xl slide-elem">
+                            "Kami terus berkomitmen menambah beragam fitur dan peningkatan aplikasi Tirta Amperaku, demi
+                            kemudahan dan kepuasan pelanggan Boyolali."
+                        </h2>
+                        <div class="w-24 h-1 bg-emerald-500 rounded-full slide-elem"></div>
+                        <p class="mt-6 text-sm tracking-widest uppercase text-neutral-400 slide-elem">Komitmen
+                            Pengembangan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 12: Penutup (Parallax) -->
+            <div class="slide" data-anim="parallaxY">
+                <div class="flex relative w-full h-full">
+                    <div class="bg-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop');">
+                    </div>
+                    <div class="overlay-gradient" style="background: rgba(23, 23, 23, 0.9);"></div>
+                    <div class="justify-center items-center text-center content-wrapper">
+                        <h2
+                            class="mb-6 w-full text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl lg:w-3/4 slide-elem">
+                            Mari Wujudkan Boyolali yang<br><span class="text-gradient-sky-emerald">Lebih Sehat dan
+                                Nyaman.</span>
+                        </h2>
+                        <p class="mb-8 text-xl text-neutral-300 slide-elem">Tirta Ampera: Kepercayaan, Transparansi,
+                            Kemudahan.</p>
+
+                        <div class="mt-4 slide-elem">
+                            <button
+                                class="bg-gradient-to-r from-sky-600 to-blue-700 text-white font-bold py-3 px-8 lg:py-5 lg:px-14 rounded-full text-lg lg:text-2xl shadow-[0_0_30px_rgba(14,165,233,0.3)] hover:scale-105 transition-transform">Unduh
+                                Tirta Amperaku</button>
+                            <p class="mt-4 text-xs tracking-widest uppercase lg:mt-8 text-neutral-400 lg:text-sm">
+                                Tersedia di Google Play Store</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
